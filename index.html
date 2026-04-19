@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagani Zonda | Automotive Art. Engineering Perfection.</title>
+    <meta name="description" content="The Pagani Zonda — a symphony of aerospace-grade engineering and bespoke Italian craftsmanship. Experience the pinnacle of hypercar artistry. Strictly limited allocation.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&family=Bebas+Neue&display=swap" rel="stylesheet">
+
+    <!-- Iconify CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ===================== 1. NAVBAR ===================== -->
+    <nav class="navbar" id="navbar" role="navigation" aria-label="Main Navigation">
+        <div class="nav-container">
+            <a href="#home" class="logo" aria-label="Pagani Home">
+                <span class="logo-text">PAGANI</span>
+                <span class="logo-sub">ZONDA</span>
+            </a>
+            <div class="nav-links" id="nav-links">
+                <a href="#engineering">Engineering</a>
+                <a href="#story">Legacy</a>
+                <a href="#models">Models</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#performance">Performance</a>
+                <a href="#press">Press</a>
+                <a href="#faq">FAQ</a>
+            </div>
+            <a href="#configure" class="btn btn-outline nav-cta">Configure Yours</a>
+            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle Menu" aria-expanded="false">
+                <i class="fa-solid fa-bars" id="menu-icon"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+            <button class="mobile-close-btn" id="mobile-close-btn" aria-label="Close menu">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <a href="#engineering" class="mobile-link">Engineering</a>
+            <a href="#story" class="mobile-link">Legacy</a>
+            <a href="#models" class="mobile-link">Models</a>
+            <a href="#gallery" class="mobile-link">Gallery</a>
+            <a href="#performance" class="mobile-link">Performance</a>
+            <a href="#press" class="mobile-link">Press</a>
+            <a href="#faq" class="mobile-link">FAQ</a>
+            <a href="#configure" class="btn btn-primary mobile-cta">Configure Yours</a>
+        </div>
+    </nav>
+
+    <!-- ===================== 2. HERO ===================== -->
+    <section class="hero" id="home" aria-label="Hero">
+        <!-- Layer 1: Image Sequence -->
+        <canvas id="hero-canvas"></canvas>
+        
+        <!-- Layer 2: Three.js 3D Scene (Particles) -->
+        <canvas id="hero-3d-scene"></canvas>
+
+        <div class="hero-overlay"></div>
+
+
+        <!-- Hero Content -->
+        <div class="hero-content">
+            <span class="badge" id="hero-badge">
+                <i class="fa-solid fa-diamond"></i>
+                &nbsp;1 of 5 Remaining &nbsp;·&nbsp; Limited 2026 Allocation
+            </span>
+            <h1 class="hero-title" id="hero-title">
+                Where Art Meets<br>
+                <span class="text-silver">Absolute</span> Speed.
+            </h1>
+            <p class="hero-subtitle" id="hero-subtitle">
+                The Pagani Zonda. A masterpiece sculpted from aerospace-grade carbon-titanium, powered by a naturally-aspirated AMG V12. Not a car. A declaration.
+            </p>
+            <div class="hero-actions" id="hero-actions">
+                <a href="#configure" class="btn btn-primary btn-glow" id="cta-primary">
+                    <i class="fa-solid fa-sliders"></i>&nbsp; Configure Yours
+                </a>
+                <a href="#story" class="btn btn-glass" id="cta-secondary">
+                    <i class="fa-solid fa-play"></i>&nbsp; Discover the Legacy
+                </a>
+            </div>
+            <!-- Trust Badges -->
+            <div class="hero-trust" id="hero-trust">
+                <span><i class="fa-solid fa-shield-halved"></i> 25-Year Heritage</span>
+                <span><i class="fa-solid fa-trophy"></i> Nürburgring Record</span>
+                <span><i class="fa-solid fa-star"></i> Top Gear Icon</span>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator" aria-hidden="true">
+            <span>Scroll</span>
+            <i class="fa-solid fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- ===================== MARQUEE ===================== -->
+    <div class="marquee-wrapper" aria-hidden="true">
+        <div class="marquee">
+            <span class="marquee-text">760 HP AMG V12 &nbsp;◆&nbsp; 0–60 IN 3.4s &nbsp;◆&nbsp; CARBON-TITANIUM MONOCOQUE &nbsp;◆&nbsp; TOP SPEED 220+ MPH &nbsp;◆&nbsp; BESPOKE ITALIAN CRAFT &nbsp;◆&nbsp; NÜRBURGRING LEGEND &nbsp;◆&nbsp; </span>
+            <span class="marquee-text">760 HP AMG V12 &nbsp;◆&nbsp; 0–60 IN 3.4s &nbsp;◆&nbsp; CARBON-TITANIUM MONOCOQUE &nbsp;◆&nbsp; TOP SPEED 220+ MPH &nbsp;◆&nbsp; BESPOKE ITALIAN CRAFT &nbsp;◆&nbsp; NÜRBURGRING LEGEND &nbsp;◆&nbsp; </span>
+        </div>
+    </div>
+
+    <!-- ===================== 3. ENGINEERING & CRAFTSMANSHIP ===================== -->
+    <section class="engineering section-padding" id="engineering" aria-labelledby="engineering-title">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag">Aerospace Precision</span>
+                <h2 class="section-title" id="engineering-title">Built Beyond<br><span class="text-silver">Human Expectation</span></h2>
+                <p class="section-desc">Four pillars of uncompromising engineering. Zero tolerance for mediocrity.</p>
+            </div>
+            <div class="engineering-grid">
+                <!-- Card 1 -->
+                <div class="eng-card" data-reveal>
+                    <div class="eng-card-icon">
+                        <i class="fa-solid fa-gear"></i>
+                    </div>
+                    <h3>AMG V12 Symphony</h3>
+                    <p>A naturally-aspirated 7.3L AMG V12 delivering 760 hp and a spine-tingling 553 lb-ft. No turbos. Pure mechanical soul. An orchestra at 8,000 rpm.</p>
+                    <div class="eng-stat">
+                        <span class="eng-stat-num">760</span>
+                        <span class="eng-stat-label">Horsepower</span>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="eng-card" data-reveal>
+                    <div class="eng-card-icon">
+                        <i class="fa-solid fa-atom"></i>
+                    </div>
+                    <h3>Carbon-Titanium Chassis</h3>
+                    <p>Pagani's proprietary Carbotitanium — six times stronger than steel, 35% lighter. The monocoque is woven by hand, strand by strand. A structural masterpiece.</p>
+                    <div class="eng-stat">
+                        <span class="eng-stat-num">1,210</span>
+                        <span class="eng-stat-label">kg Dry Weight</span>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="eng-card" data-reveal>
+                    <div class="eng-card-icon">
+                        <i class="fa-solid fa-wind"></i>
+                    </div>
+                    <h3>Aerodynamic Mastery</h3>
+                    <p>Every surface sculpted in a wind tunnel. Active aero deploys at speed, generating extreme downforce while cutting through air with surgical precision at 220+ mph.</p>
+                    <div class="eng-stat">
+                        <span class="eng-stat-num">220+</span>
+                        <span class="eng-stat-label">Top Speed (mph)</span>
+                    </div>
+                </div>
+                <!-- Card 4 -->
+                <div class="eng-card" data-reveal>
+                    <div class="eng-card-icon">
+                        <i class="fa-solid fa-hand-sparkles"></i>
+                    </div>
+                    <h3>Bespoke Italian Interior</h3>
+                    <p>Hand-stitched Poltrona Frau leather, exposed carbon-fiber artistry, and machined aluminum ergonomics. Every stitch placed by maestros in San Cesario sul Panaro.</p>
+                    <div class="eng-stat">
+                        <span class="eng-stat-num">4,000+</span>
+                        <span class="eng-stat-label">Hours to Build</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== 4. ABOUT / STORY ===================== -->
+    <section class="story section-padding" id="story" aria-labelledby="story-title">
+        <div class="container">
+            <div class="story-grid">
+                <div class="story-image" data-reveal>
+                    <img src="https://images.unsplash.com/photo-1525609004556-c46c7d6cf023?w=900&q=80&auto=format&fit=crop" alt="Pagani Factory - Bespoke Italian Craftsmanship" loading="lazy">
+                    <div class="story-glass-card">
+                        <i class="fa-solid fa-infinity text-silver" style="font-size:1.5rem;margin-bottom:0.5rem;"></i>
+                        <span class="stat-num">25</span>
+                        <span class="stat-label">Years of Perfection</span>
+                    </div>
+                </div>
+                <div class="story-content" data-reveal>
+                    <span class="section-tag">The Vision</span>
+                    <h2 class="section-title" id="story-title">Inspired by<br><span class="text-silver">Leonardo da Vinci.</span></h2>
+                    <p class="story-lead">Horacio Pagani arrived in Italy with a dream and a letter of recommendation from none other than Juan Manuel Fangio. He believed that art and science were one.</p>
+                    <p class="story-body">Born in Reggio Emilia in 1992, Pagani Automobili was forged from an obsession: that a hypercar must be as beautiful as a painting and as precise as a spacecraft. The Zonda — named after a warm South American wind — was that vision made manifest. Unveiled in Geneva, 1999, it shattered every convention.</p>
+                    <p class="story-body">Today, each Zonda is still built by fewer than 100 artisans. Still signed by human hands. Still unrepeatable.</p>
+                    <div class="story-signature">
+                        <p class="signature-text">— Horacio Pagani, Founder</p>
+                        <p class="signature-quote"><em>"The difference between something good and something great is attention to detail."</em></p>
+                    </div>
+                    <a href="#configure" class="btn btn-outline mt-4">Experience the Factory</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== 5. MODELS SHOWCASE ===================== -->
+    <section class="models section-padding" id="models" aria-labelledby="models-title">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag">The Collection</span>
+                <h2 class="section-title" id="models-title">Choose Your<br><span class="text-silver">Legend</span></h2>
+                <p class="section-desc">Each variant is a chapter in the Zonda saga. Each is irreplaceable.</p>
+            </div>
+            <div class="models-grid">
+                <!-- Model 1 -->
+                <div class="model-card" data-reveal>
+                    <div class="model-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=80&auto=format&fit=crop" alt="Pagani Zonda C12" loading="lazy" class="model-img">
+                        <div class="model-badge">The Original</div>
+                        <div class="model-overlay">
+                            <a href="#configure" class="btn btn-primary btn-sm">Inquire Now</a>
+                        </div>
+                    </div>
+                    <div class="model-info">
+                        <h3>Zonda C12</h3>
+                        <p>The genesis. Raw. Unfiltered. A 6.0L AMG V12 in a body sculpted by passion. The car that changed everything.</p>
+                        <div class="model-specs">
+                            <div class="spec-item">
+                                <span class="spec-val">394</span>
+                                <span class="spec-key">HP</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-val">3.7s</span>
+                                <span class="spec-key">0–60 mph</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-val">186</span>
+                                <span class="spec-key">Top MPH</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Model 2 -->
+                <div class="model-card featured" data-reveal>
+                    <div class="model-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=700&q=80&auto=format&fit=crop" alt="Pagani Zonda Cinque" loading="lazy" class="model-img">
+                        <div class="model-badge badge-silver">Cinque — 1 of 5</div>
+                        <div class="model-overlay">
+                            <a href="#configure" class="btn btn-primary btn-sm">Inquire Now</a>
+                        </div>
+                    </div>
+                    <div class="model-info">
+                        <h3>Zonda Cinque</h3>
+                        <p>Strictly 5 examples worldwide. Carbon-titanium bodywork, active aerodynamics, and 678 hp of naturally-aspirated fury. The rarest modern hypercar.</p>
+                        <div class="model-specs">
+                            <div class="spec-item">
+                                <span class="spec-val">678</span>
+                                <span class="spec-key">HP</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-val">3.4s</span>
+                                <span class="spec-key">0–60 mph</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-val">217</span>
+                                <span class="spec-key">Top MPH</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Model 3 -->
+                <div class="model-card" data-reveal>
+                    <div class="model-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=700&q=80&auto=format&fit=crop" alt="Pagani Zonda R" loading="lazy" class="model-img">
+                        <div class="model-badge">Track Only</div>
+                        <div class="model-overlay">
+                            <a href="#configure" class="btn btn-primary btn-sm">Inquire Now</a>
+                        </div>
+                    </div>
+                    <div class="model-info">
+                        <h3>Zonda R</h3>
+                        <p>Born on the Nürburgring. 740 hp. No weight limit. No compromise. The most extreme Zonda ever conceived — the lap record still stands.</p>
+                        <div class="model-specs">
+                            <div class="spec-item">
+                                <span class="spec-val">740</span>
+                                <span class="spec-key">HP</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-val">2.7s</span>
+                                <span class="spec-key">0–60 mph</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-val">233</span>
+                                <span class="spec-key">Top MPH</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Model 4 -->
+                <div class="model-card" data-reveal>
+                    <div class="model-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=700&q=80&auto=format&fit=crop" alt="Pagani Zonda Tricolore" loading="lazy" class="model-img">
+                        <div class="model-badge badge-tricolore">Tricolore — 1 of 3</div>
+                        <div class="model-overlay">
+                            <a href="#configure" class="btn btn-primary btn-sm">Inquire Now</a>
+                        </div>
+                    </div>
+                    <div class="model-info">
+                        <h3>Zonda Tricolore</h3>
+                        <p>A tribute to the Frecce Tricolori aerobatic team. Three produced. Italian flag livery. A symphony of carbon, titanium, and national pride.</p>
+                        <div class="model-specs">
+                            <div class="spec-item">
+                                <span class="spec-val">678</span>
+                                <span class="spec-key">HP</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-val">3.4s</span>
+                                <span class="spec-key">0–60 mph</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-val">217</span>
+                                <span class="spec-key">Top MPH</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== GALLERY ===================== -->
+    <section class="gallery section-padding" id="gallery" aria-labelledby="gallery-title">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag">Visual Art</span>
+                <h2 class="section-title" id="gallery-title">The <span class="text-silver">Gallery</span></h2>
+                <p class="section-desc">A visual celebration of uncompromising automotive artistry.</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item item-1" data-reveal>
+                    <img src="https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?w=1200&q=80&auto=format&fit=crop" alt="Pagani Gallery Image 1" loading="lazy">
+                    <div class="gallery-overlay">
+                        <i class="fa-solid fa-expand"></i>
+                    </div>
+                </div>
+                <div class="gallery-item item-2" data-reveal>
+                    <img src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=800&q=80&auto=format&fit=crop" alt="Pagani Gallery Image 2" loading="lazy">
+                    <div class="gallery-overlay">
+                        <i class="fa-solid fa-expand"></i>
+                    </div>
+                </div>
+                <div class="gallery-item item-3" data-reveal>
+                    <img src="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=800&q=80&auto=format&fit=crop" alt="Pagani Gallery Image 3" loading="lazy">
+                    <div class="gallery-overlay">
+                        <i class="fa-solid fa-expand"></i>
+                    </div>
+                </div>
+                <div class="gallery-item item-4" data-reveal>
+                    <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=800&q=80&auto=format&fit=crop" alt="Pagani Gallery Image 4" loading="lazy">
+                    <div class="gallery-overlay">
+                        <i class="fa-solid fa-expand"></i>
+                    </div>
+                </div>
+                <div class="gallery-item item-5" data-reveal>
+                    <img src="https://images.unsplash.com/photo-1511919884226-fd3cad34687c?w=800&q=80&auto=format&fit=crop" alt="Pagani Gallery Image 5" loading="lazy">
+                    <div class="gallery-overlay">
+                        <i class="fa-solid fa-expand"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== 6. WHY PAGANI ===================== -->
+    <section class="why-pagani section-padding" id="why" aria-labelledby="why-title">
+        <div class="container">
+            <div class="why-grid">
+                <div class="why-content" data-reveal>
+                    <span class="section-tag">The Pagani Difference</span>
+                    <h2 class="section-title" id="why-title">Unrivaled.<br><span class="text-silver">In Every Dimension.</span></h2>
+                    <ul class="why-list">
+                        <li>
+                            <div class="why-icon"><i class="fa-solid fa-circle-check"></i></div>
+                            <div>
+                                <strong>Bespoke to Your Soul.</strong>
+                                <p>Every Zonda is unique. Choose your carbon weave, leather, stitch color, and titanium trim. Your Zonda will never be replicated. It is yours alone.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="why-icon"><i class="fa-solid fa-circle-check"></i></div>
+                            <div>
+                                <strong>Aerospace-Grade Materials.</strong>
+                                <p>Carbotitanium, titanium bolts, and aircraft-grade aluminum. Every gram justified. Every material chosen with obsessive precision.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="why-icon"><i class="fa-solid fa-circle-check"></i></div>
+                            <div>
+                                <strong>Lifetime Pagani Support.</strong>
+                                <p>A dedicated Pagani Atelier team provides lifetime care. Factory tours, personal configuration, and white-glove global delivery.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="why-icon"><i class="fa-solid fa-circle-check"></i></div>
+                            <div>
+                                <strong>Uncompromising Driving Purity.</strong>
+                                <p>No driver aids masking the experience. Just you, the V12, and the road. Connected. Visceral. Alive. The way driving was meant to be.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="why-visual" data-reveal>
+                    <div class="why-stats-grid">
+                        <div class="why-stat-card">
+                            <span class="why-stat-num" data-count="25">0</span>
+                            <span class="why-stat-plus">+</span>
+                            <span class="why-stat-label">Years of Heritage</span>
+                        </div>
+                        <div class="why-stat-card">
+                            <span class="why-stat-num" data-count="760">0</span>
+                            <span class="why-stat-plus">hp</span>
+                            <span class="why-stat-label">AMG V12 Power</span>
+                        </div>
+                        <div class="why-stat-card">
+                            <span class="why-stat-num" data-count="4000">0</span>
+                            <span class="why-stat-plus">+</span>
+                            <span class="why-stat-label">Hours Built By Hand</span>
+                        </div>
+                        <div class="why-stat-card">
+                            <span class="why-stat-num" data-count="140">0</span>
+                            <span class="why-stat-plus"></span>
+                            <span class="why-stat-label">Zondas Ever Built</span>
+                        </div>
+                    </div>
+                    <div class="why-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1583121274602-3e2820c69888?w=700&q=80&auto=format&fit=crop" alt="V12 Engine Detail" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== 7. PERFORMANCE / SOCIAL PROOF ===================== -->
+    <section class="performance section-padding" id="performance" aria-labelledby="performance-title">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag">Track Record</span>
+                <h2 class="section-title" id="performance-title">Milestones That<br><span class="text-silver">Define History</span></h2>
+            </div>
+            <div class="perf-timeline">
+                <div class="perf-item" data-reveal>
+                    <div class="perf-year">1999</div>
+                    <div class="perf-dot"></div>
+                    <div class="perf-content">
+                        <h4>Geneva Motor Show Debut</h4>
+                        <p>The Zonda C12 unveiled to a stunned world. Standing ovation. Every major automotive outlet declared it the most beautiful hypercar ever conceived.</p>
+                    </div>
+                </div>
+                <div class="perf-item" data-reveal>
+                    <div class="perf-year">2004</div>
+                    <div class="perf-dot"></div>
+                    <div class="perf-content">
+                        <h4>Nürburgring Production Car Record</h4>
+                        <p>The Zonda F laps the Green Hell in 7:27.82 — smashing the production car record and cementing Pagani's engineering supremacy.</p>
+                    </div>
+                </div>
+                <div class="perf-item" data-reveal>
+                    <div class="perf-year">2010</div>
+                    <div class="perf-dot"></div>
+                    <div class="perf-content">
+                        <h4>Top Gear "Best Driving Car" Award</h4>
+                        <p>Jeremy Clarkson names the Zonda R the single greatest driving experience of his career. "Nothing else comes close — nothing."</p>
+                    </div>
+                </div>
+                <div class="perf-item" data-reveal>
+                    <div class="perf-year">2017</div>
+                    <div class="perf-dot"></div>
+                    <div class="perf-content">
+                        <h4>$15M Auction World Record</h4>
+                        <p>A Zonda Revolucion becomes the most valuable modern Italian car ever sold at auction — a testament to its irreplaceable status.</p>
+                    </div>
+                </div>
+                <div class="perf-item" data-reveal>
+                    <div class="perf-year">2026</div>
+                    <div class="perf-dot"></div>
+                    <div class="perf-content">
+                        <h4>Final Allocation — 5 Remaining</h4>
+                        <p>The last bespoke Zonda allocation is now open. Five examples remain. Once delivered, an era ends. This is your final opportunity.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== 8. PRESS / TESTIMONIALS ===================== -->
+    <section class="press section-padding" id="press" aria-labelledby="press-title">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag">As Seen In</span>
+                <h2 class="section-title" id="press-title">What the World<br><span class="text-silver">Says</span></h2>
+            </div>
+            <!-- Press Logos Bar -->
+            <div class="press-logos" aria-label="Press publications">
+                <span>Top Gear</span>
+                <span>EVO Magazine</span>
+                <span>Motor Trend</span>
+                <span>Road & Track</span>
+                <span>Car & Driver</span>
+                <span>Autocar</span>
+            </div>
+            <!-- Testimonials -->
+            <div class="testimonials-grid">
+                <div class="testimonial-card" data-reveal>
+                    <div class="quote-mark">&ldquo;</div>
+                    <p class="review-text">The Zonda is not a car. It's a state of mind. Every time I sit in one, I'm reminded of what driving actually means. It's the finest automotive creation of the past quarter-century — bar none.</p>
+                    <div class="reviewer">
+                        <div class="avatar-icon"><i class="fa-solid fa-user"></i></div>
+                        <div class="info">
+                            <h4>Jeremy Clarkson</h4>
+                            <span>Top Gear Magazine, BBC</span>
+                        </div>
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card" data-reveal>
+                    <div class="quote-mark">&ldquo;</div>
+                    <p class="review-text">I have driven every hypercar this decade. Nothing — and I mean nothing — prepares you for the violence and beauty of the Zonda R at full song through Eau Rouge. It's automotive theatre at its most extreme.</p>
+                    <div class="reviewer">
+                        <div class="avatar-icon"><i class="fa-solid fa-user"></i></div>
+                        <div class="info">
+                            <h4>Henry Catchpole</h4>
+                            <span>EVO Magazine, Road Test Editor</span>
+                        </div>
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card" data-reveal>
+                    <div class="quote-mark">&ldquo;</div>
+                    <p class="review-text">The craftsmanship inside a Zonda makes a Rolls-Royce look mass-produced. The hand-stitched leather, the machined titanium bolts, the exposed carbon weave — Horacio Pagani is da Vinci with a wrench.</p>
+                    <div class="reviewer">
+                        <div class="avatar-icon"><i class="fa-solid fa-user"></i></div>
+                        <div class="info">
+                            <h4>Matt Farah</h4>
+                            <span>The Smoking Tire, Motor Trend</span>
+                        </div>
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== 9. FAQ ===================== -->
+    <section class="faq section-padding" id="faq" aria-labelledby="faq-title">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag">Ownership</span>
+                <h2 class="section-title" id="faq-title">Your Questions,<br><span class="text-silver">Answered</span></h2>
+            </div>
+            <div class="faq-container" role="list">
+                <div class="faq-item" role="listitem">
+                    <button class="faq-question" aria-expanded="false" id="faq-q1" aria-controls="faq-a1">
+                        <h3>How do I acquire a Pagani Zonda?</h3>
+                        <i class="fa-solid fa-plus faq-icon" aria-hidden="true"></i>
+                    </button>
+                    <div class="faq-answer" id="faq-a1" role="region" aria-labelledby="faq-q1">
+                        <p>Acquisition begins with a private consultation at the Pagani Atelier in San Cesario sul Panaro, Italy, or at one of our authorised global representatives. We do not sell through traditional dealerships. Fill in the Configure form and a Pagani specialist will contact you within 48 hours.</p>
+                    </div>
+                </div>
+                <div class="faq-item" role="listitem">
+                    <button class="faq-question" aria-expanded="false" id="faq-q2" aria-controls="faq-a2">
+                        <h3>What does the bespoke programme include?</h3>
+                        <i class="fa-solid fa-plus faq-icon" aria-hidden="true"></i>
+                    </button>
+                    <div class="faq-answer" id="faq-a2" role="region" aria-labelledby="faq-q2">
+                        <p>The Pagani Bespoke Programme is unlimited in scope. Choose your carbon-weave pattern, body color, interior leather, stitch colour, titanium hardware finish, and personalisation details such as engraved nameplates. Every element is hand-finished to your exact specification. Delivery includes a factory tour and personal handover by the Pagani team.</p>
+                    </div>
+                </div>
+                <div class="faq-item" role="listitem">
+                    <button class="faq-question" aria-expanded="false" id="faq-q3" aria-controls="faq-a3">
+                        <h3>What is the maintenance schedule and cost?</h3>
+                        <i class="fa-solid fa-plus faq-icon" aria-hidden="true"></i>
+                    </button>
+                    <div class="faq-answer" id="faq-a3" role="region" aria-labelledby="faq-q3">
+                        <p>Each Zonda receives annual servicing at Pagani-certified workshops globally. A dedicated aftersales team provides direct contact with Pagani engineers. The Pagani Lifetime Care Programme ensures your vehicle's mechanical and cosmetic perfection is maintained in perpetuity — because a Zonda is not just a purchase, it is a relationship.</p>
+                    </div>
+                </div>
+                <div class="faq-item" role="listitem">
+                    <button class="faq-question" aria-expanded="false" id="faq-q4" aria-controls="faq-a4">
+                        <h3>Can I visit the Pagani factory?</h3>
+                        <i class="fa-solid fa-plus faq-icon" aria-hidden="true"></i>
+                    </button>
+                    <div class="faq-answer" id="faq-a4" role="region" aria-labelledby="faq-q4">
+                        <p>Factory tours are available exclusively to Pagani clients and prospective owners by private invitation. The experience includes a guided walk through all production stages, a personal meeting with artisans, and the opportunity to see your own vehicle during assembly. Contact us to arrange your exclusive visit.</p>
+                    </div>
+                </div>
+                <div class="faq-item" role="listitem">
+                    <button class="faq-question" aria-expanded="false" id="faq-q5" aria-controls="faq-a5">
+                        <h3>Does the Zonda appreciate in value?</h3>
+                        <i class="fa-solid fa-plus faq-icon" aria-hidden="true"></i>
+                    </button>
+                    <div class="faq-answer" id="faq-a5" role="region" aria-labelledby="faq-q5">
+                        <p>Pagani Zondas have proven to be exceptional stores of value. Early C12 models have appreciated over 600% since new. The Cinque Roadster achieved $15M at auction. With only ~140 Zondas ever produced, scarcity and desirability are intrinsic. We advise all potential owners to consult with a specialist automotive investment advisor.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== 10. CTA BANNER ===================== -->
+    <section class="cta-section" id="configure" aria-labelledby="cta-title">
+        <div class="cta-bg" aria-hidden="true">
+            <img src="https://images.unsplash.com/photo-1511919884226-fd3cad34687c?w=1920&q=80&auto=format&fit=crop" alt="" loading="lazy">
+            <div class="cta-overlay"></div>
+        </div>
+        <div class="container cta-content">
+            <div class="cta-inner" data-reveal>
+                <div class="cta-badge">
+                    <i class="fa-solid fa-diamond"></i>
+                    Final 2026 Allocation — 5 of 5 Remaining
+                </div>
+                <h2 class="cta-title" id="cta-title">Your Zonda<br><span class="text-silver">Awaits Configuration.</span></h2>
+                <p class="cta-subtitle">This is not a transaction. It is the beginning of a lifelong relationship with the most revered hypercar in history. Speak with a Pagani specialist. No obligation.</p>
+                <div class="cta-urgency-bar">
+                    <i class="fa-solid fa-clock text-silver"></i>
+                    <span>Allocation closes when the final 5 vehicles are spoken for. Enquiries are strictly confidential.</span>
+                </div>
+                <div class="cta-actions">
+                    <a href="mailto:ownership@pagani.com" class="btn btn-primary btn-glow btn-large" id="cta-main-btn">
+                        <i class="fa-solid fa-envelope"></i>&nbsp; Configure Yours — Inquire Now
+                    </a>
+                    <a href="tel:+390536948111" class="btn btn-glass btn-large">
+                        <i class="fa-solid fa-phone"></i>&nbsp; Call Pagani Atelier
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== 11. NEWSLETTER ===================== -->
+    <section class="newsletter section-padding" aria-labelledby="newsletter-title">
+        <div class="container">
+            <div class="newsletter-box" data-reveal>
+                <div class="newsletter-content">
+                    <i class="fa-solid fa-envelope-open text-silver" style="font-size:2rem;margin-bottom:1rem;display:block;"></i>
+                    <h2 id="newsletter-title">Join the <span class="text-silver">Pagani Club</span></h2>
+                    <p>Receive exclusive allocation previews, engineering insights, and private event invitations. Reserved strictly for Pagani enthusiasts.</p>
+                </div>
+                <form class="newsletter-form" id="newsletter-form" novalidate>
+                    <div class="form-group">
+                        <input type="email" id="newsletter-email" name="email" placeholder="Your email address" required autocomplete="email" aria-label="Email address">
+                        <button type="submit" class="btn btn-primary" id="newsletter-submit">
+                            <i class="fa-solid fa-arrow-right"></i>&nbsp; Join the Club
+                        </button>
+                    </div>
+                    <p class="form-note"><i class="fa-solid fa-lock"></i> No spam. Unsubscribe anytime. Your privacy is absolute.</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== 12. FOOTER ===================== -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#home" class="logo footer-logo" aria-label="Pagani">
+                        <span class="logo-text">PAGANI</span>
+                        <span class="logo-sub">ZONDA</span>
+                    </a>
+                    <p class="footer-desc">Pagani Automobili S.p.A. — Via Nazionale Cisa 15, 41018 San Cesario sul Panaro (MO), Italy.</p>
+                    <div class="social-links" aria-label="Social Media">
+                        <a href="https://instagram.com/paganiautomobili" target="_blank" rel="noopener" aria-label="Instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="https://youtube.com/pagani" target="_blank" rel="noopener" aria-label="YouTube">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+                        <a href="https://facebook.com/PaganiAutomobili" target="_blank" rel="noopener" aria-label="Facebook">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="https://twitter.com/pagani" target="_blank" rel="noopener" aria-label="X (Twitter)">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>The Zonda</h4>
+                    <ul>
+                        <li><a href="#models">All Models</a></li>
+                        <li><a href="#configure">Configure Yours</a></li>
+                        <li><a href="#configure">Request Allocation</a></li>
+                        <li><a href="#configure">Factory Tour</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Heritage</h4>
+                    <ul>
+                        <li><a href="#story">Our Story</a></li>
+                        <li><a href="#engineering">Engineering</a></li>
+                        <li><a href="#performance">Track Record</a></li>
+                        <li><a href="#press">Press Room</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Ownership</h4>
+                    <ul>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="mailto:ownership@pagani.com">Contact Atelier</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Legal</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Pagani Automobili S.p.A. All rights reserved. Pagani&reg; and Zonda&reg; are registered trademarks of Pagani Automobili S.p.A.</p>
+                <p class="footer-disclaimer">This is a fan/concept landing page created for design demonstration purposes. All trademarks belong to their respective owners.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===================== SCRIPTS ===================== -->
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <!-- Iconify (supplemental) -->
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+    <!-- Hero 3D Scene -->
+    <script src=".hero/hero3d.js"></script>
+
+</body>
+</html>
